@@ -35,7 +35,9 @@ public class LoginController {
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
-            stage.showAndWait();
+
+            // Mostrar la ventana
+            stage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
