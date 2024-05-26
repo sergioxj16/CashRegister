@@ -14,6 +14,5 @@ public class Administrator extends User {
         super(name, password);
     }
 
-    // Additional methods specific to administrators can be added here
 }
 

@@ -37,7 +37,7 @@ public class User {
     }
 
     /**
-     * Retrieves the password of the user.
+     * return the password of the user.
      *
      * @return The password of the user.
      */
@@ -54,5 +54,3 @@ public class User {
         this.password = password;
     }
 }
-
-

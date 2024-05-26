@@ -1,5 +1,6 @@
 package cashregister.cashregister;
 
+import classes.Inventory;
 import classes.UserManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +18,9 @@ import javafx.scene.Node;
 
 import java.io.IOException;
 
+/**
+ * Controller for the login view.
+ */
 public class LoginController {
     @FXML
     private Button loginButton;
@@ -29,14 +33,24 @@ public class LoginController {
 
     private UserManager userManager;
 
+    /**
+     * Constructor for the controller.
+     */
     public LoginController() {
         userManager = new UserManager();
     }
 
+    /**
+     * Method to handle the click event on the login button.
+     * @param event Action event.
+     */
     @FXML
     protected void loginButtonOnclick(ActionEvent event) {
         String username = userTextBox.getText();
         String password = passwordTextBox.getText();
+
+        Inventory inventory = new Inventory();
+        inventory.loadFromFile();
 
         try {
             if (userManager.getUsers().containsKey(username) && userManager.getUsers().get(username).equals(password)) {
@@ -65,6 +79,11 @@ public class LoginController {
         }
     }
 
+    /**
+     * Shows an error alert.
+     * @param title Title of the alert.
+     * @param message Message of the alert.
+     */
     private void showErrorAlert(String title, String message) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle(title);

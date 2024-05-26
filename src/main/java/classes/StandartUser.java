@@ -14,6 +14,5 @@ public class StandartUser extends User {
         super(name, password);
     }
 
-    // Additional methods specific to standard users can be added here
 }
 

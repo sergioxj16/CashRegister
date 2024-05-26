@@ -2,4 +2,3 @@ paquito;123
 juan ;CArlos
 admin;123
 user;123
-pquito;123123123
