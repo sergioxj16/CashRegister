@@ -13,6 +13,9 @@ public class CashRegisterApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(CashRegisterApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setScene(scene);
+        stage.setFullScreen(false);
+        stage.setMaximized(false);
+        stage.setResizable(false);
         stage.show();
     }
 

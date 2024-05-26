@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="574.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashregister.cashregister.ManagerController">
    <children>
       <Text layoutX="104.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE USER" />
@@ -16,16 +15,16 @@
       <Text layoutX="299.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETE USER" />
       <Text layoutX="299.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
       <Text layoutX="299.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type &quot;CONFIRM&quot;" />
-      <ListView layoutX="475.0" layoutY="138.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="usersListView" layoutX="475.0" layoutY="138.0" prefHeight="200.0" prefWidth="200.0" />
       <Text layoutX="475.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERS" />
-      <Button layoutX="147.0" layoutY="350.0" mnemonicParsing="false" text="CREATE" />
-      <Button layoutX="334.0" layoutY="350.0" mnemonicParsing="false" text="CONFIRM" />
-      <Button layoutX="619.0" layoutY="350.0" mnemonicParsing="false" text="Refresh" />
-      <TextField layoutX="294.0" layoutY="205.0" />
-      <TextField layoutX="102.0" layoutY="205.0" />
-      <TextField layoutX="102.0" layoutY="263.0" />
-      <TextField layoutX="294.0" layoutY="263.0" />
-      <TextField layoutX="101.0" layoutY="313.0" />
-      <Button fx:id="backButton" layoutX="75.0" layoutY="55.0" mnemonicParsing="false" text="BACK" />
+      <Button layoutX="147.0" layoutY="350.0" mnemonicParsing="false" onAction="#createUserButton" text="CREATE" />
+      <Button layoutX="326.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteUserButton" text="CONFIRM" />
+      <Button layoutX="475.0" layoutY="350.0" mnemonicParsing="false" onAction="#refreshButton" text="Refresh" />
+      <TextField fx:id="deleteUserUsernameField" layoutX="294.0" layoutY="205.0" />
+      <TextField fx:id="createUserUsernameField" layoutX="102.0" layoutY="205.0" />
+      <TextField fx:id="createUserPasswordField" layoutX="102.0" layoutY="263.0" />
+      <TextField fx:id="confirmField" layoutX="294.0" layoutY="263.0" />
+      <TextField fx:id="createUserRepeatPasswordField" layoutX="101.0" layoutY="313.0" />
+      <Button fx:id="backButton" layoutX="75.0" layoutY="55.0" mnemonicParsing="false" onAction="#backButton" text="BACK" />
    </children>
 </AnchorPane>

@@ -15,7 +15,7 @@
          </font>
       </Text>
       <Button fx:id="returnButton" layoutX="424.0" layoutY="100.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="89.0" text="RETURN" />
-      <Button fx:id="logOutButton" layoutX="266.0" layoutY="337.0" mnemonicParsing="false" text="LOG OUT" />
+      <Button fx:id="logOutButton" layoutX="266.0" layoutY="337.0" mnemonicParsing="false" onAction="#logOutButtonOnclick" text="LOG OUT" />
       <Button fx:id="userManagerButton" layoutX="333.0" layoutY="236.0" mnemonicParsing="false" onAction="#userManagerButtonOnclick" prefHeight="71.0" prefWidth="110.0" text="USER MANAGER" />
       <Button fx:id="inventoryButton" layoutX="156.0" layoutY="236.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="110.0" text="INVENTORY" />
    </children>
